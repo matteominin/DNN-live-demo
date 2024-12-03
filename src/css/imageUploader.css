@@ -101,7 +101,6 @@ button,
 }
 
 .hidden_button {
-    border: 1px solid red;
     position: absolute;
     top: 0;
     left: 0;
