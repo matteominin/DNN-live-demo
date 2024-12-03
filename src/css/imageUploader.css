@@ -1,0 +1,95 @@
+/* General container styling */
+.container {
+    margin: 0 auto;
+    font-family: 'Poppins', Arial, sans-serif;
+    text-align: center;
+    border: 1px solid transparent;
+    max-width: 800px;
+    width: 80%;
+    padding: 0 50px;
+}
+
+/* Title styling */
+.title {
+    font-size: 28px;
+    color: #f3f3f3;
+    font-weight: bold;
+    margin: 40px auto;
+}
+
+/* File input styling */
+.file-input {
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+    background-color: #1e60ae;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+.file-input:hover {
+    background-color: #357ab8;
+}
+
+.file-input:active {
+    background-color: #2b5d91;
+}
+
+/* Preview container */
+.preview-container {
+    background: #fff;
+    margin: 30px auto;
+    padding: 20px 40px 0 40px;
+    border-radius: 8px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.preview-container h3 {
+    color: #333;
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.preview-image {
+    width: 128px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.preview-image:hover {
+    transform: scale(1.05);
+}
+
+/* Add smooth transitions to all interactive elements */
+button,
+.file-input {
+    transition: all 0.3s ease;
+}
+
+.row {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.prediction {
+    background-color: #a9c9ed99;
+    border: 2px solid #0c67e0;
+    width: 100%;
+    margin-left: 40px;
+    height: 128px;
+    margin-top: auto;
+    border-radius: 10px;
+    margin-bottom: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
