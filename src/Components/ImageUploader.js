@@ -78,9 +78,10 @@ const ConfidenceHistogram = ({ confidences }) => {
     return <Bar data={data} options={options} />;
 };
 
-const ImageUploader = () => {
+const ImageUploader = ({ apiUrl }) => {
     const [image, setImage] = useState(null);
     const [prediction, setPrediction] = useState(null);
+    const [error, setError] = useState(null);
 
     const resizeImage = (file) => {
         return new Promise((resolve) => {
@@ -104,6 +105,7 @@ const ImageUploader = () => {
     };
 
     const handleImageUpload = async (event) => {
+        setError(null);
         const file = event.target.files[0];
         if (!file) return;
 
@@ -113,13 +115,14 @@ const ImageUploader = () => {
         const formData = new FormData();
         formData.append('image', file);
 
-        const res = await fetch('http://127.0.0.1:5000/predict', {
+        const res = await fetch(`${apiUrl}/predict`, {
             method: 'POST',
             body: formData,
         })
 
         if (!res.ok) {
             console.error('Failed to upload image');
+            setError('Failed to upload image');
             return;
         }
 
@@ -137,7 +140,9 @@ const ImageUploader = () => {
                 onChange={handleImageUpload}
             />
 
-            {image && (
+            {error && <div className="error">{error}</div>}
+
+            {image && !error && (
                 <div className="preview-container">
                     <div className="row">
                         <div className="image">
