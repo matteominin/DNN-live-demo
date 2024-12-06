@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/DNN-live-demo/static/css/main.7bae741a.css",
-    "main.js": "/DNN-live-demo/static/js/main.832e054b.js",
+    "main.js": "/DNN-live-demo/static/js/main.01d6ac3b.js",
     "index.html": "/DNN-live-demo/index.html",
     "main.7bae741a.css.map": "/DNN-live-demo/static/css/main.7bae741a.css.map",
-    "main.832e054b.js.map": "/DNN-live-demo/static/js/main.832e054b.js.map"
+    "main.01d6ac3b.js.map": "/DNN-live-demo/static/js/main.01d6ac3b.js.map"
   },
   "entrypoints": [
     "static/css/main.7bae741a.css",
-    "static/js/main.832e054b.js"
+    "static/js/main.01d6ac3b.js"
   ]
 }
